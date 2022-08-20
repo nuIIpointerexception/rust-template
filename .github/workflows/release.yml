@@ -13,18 +13,9 @@ jobs:
     # RELEASE_VERSION: TEST-0.0.0
     outputs:
       upload_url: ${{ steps.release.outputs.upload_url }}
-      release_version: ${{ env.RELEASE_VERSION }}
+      release_version: 0.1.0 # Change your version here.
       bin_name: template # You might want to change it to your preferred export name.
     steps:
-      - name: Get the release version from the tag
-        shell: bash
-        if: env.RELEASE_VERSION == ''
-        run: |
-          # Apparently, this is the right way to get a tag name. Really?
-          #
-          # See: https://github.community/t5/GitHub-Actions/How-to-get-just-the-tag-name/m-p/32167/highlight/true#M1027
-          echo "RELEASE_VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
-          echo "version is: ${{ env.RG_VERSION }}"
       - name: Create GitHub release
         id: release
         uses: actions/create-release@v1
