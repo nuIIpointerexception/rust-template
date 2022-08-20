@@ -15,6 +15,7 @@ jobs:
       # FILE EXPORT CONFIGURATION.
       release_version: 0.1.0 # Change your version here.
       bin_name: template # You might want to change it to your preferred export name.
+      # END OF CONFIGURATION.
 
     steps:
       - name: Create Release
@@ -25,9 +26,10 @@ jobs:
         with:
           # RELEASE TAB CONFIGURATION.
           tag_name: 0.1.0 # Change your version here.
-          release_name: 📦 Template # You might want to change it to your preferred release name.
+          release_name: 📦 Template 0.1.0 # You might want to change it to your preferred release name.
           prerelease: true # Set too false to create a "stable release".
           draft: false # Set to true to create a draft release. This will keep your release private, and you would need to manually publish it.
+          # END OF CONFIGURATION.
 
   build-release:
     name: build-release
