@@ -22,9 +22,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ env.RELEASE_VERSION }}
-          release_name: ${{ env.RELEASE_VERSION }}
-          prerelease: ${{ contains(env.RELEASE_VERSION, '-prerelease') }}
+          tag_name:  needs.create-release.outputs.release_version
+          release_name: ${{ needs.create-release.outputs.release_version }}
+          prerelease: ${{ contains(needs.create-release.outputs.release_version, '-prerelease') }}
 
   build-release:
     name: build-release
