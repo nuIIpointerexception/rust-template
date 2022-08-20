@@ -33,7 +33,10 @@ jobs:
     steps:
       - name: Export project name environment variable
         shell: bash
-        run: echo "{PROJECT_NAME}={GITHUB_REPOSITORY#*/}" >> $GITHUB_ENV
+        run: |
+          echo ::set-output name=SOURCE_NAME::${GITHUB_REF#refs/*/}
+          echo ::set-output name=SOURCE_BRANCH::${GITHUB_REF#refs/heads/}
+          echo ::set-output name=SOURCE_TAG::${GITHUB_REF#refs/tags/}
 
       - name: Checkout repository
         uses: actions/checkout@v2
