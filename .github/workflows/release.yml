@@ -11,10 +11,11 @@ jobs:
 
     # Change your project's configs here.
     outputs:
-      # File export configuration.
-      upload_url: ${{ steps.release.outputs.upload_url }} # Don't change this.
+      upload_url: ${{ steps.release.outputs.upload_url }}
+      # FILE EXPORT CONFIGURATION.
       release_version: 0.1.0 # Change your version here.
       bin_name: template # You might want to change it to your preferred export name.
+
     steps:
       - name: Create Release
         id: release
@@ -22,11 +23,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          # Configure the release tab here.
+          # RELEASE TAB CONFIGURATION.
           tag_name: 0.1.0 # Change your version here.
           release_name: 📦 Template # You might want to change it to your preferred release name.
           prerelease: true # Set too false to create a "stable release".
-          description: This is an example deployment 📦. # Change your description here.
+          draft: false # Set to true to create a draft release. This will keep your release private, and you would need to manually publish it.
 
   build-release:
     name: build-release
