@@ -18,10 +18,11 @@ Available releases can be downloaded for your platform of choice on the [Release
 
 Here is a simple checklist to set up your first personal project using this template
 
-1. Update `Cargo.toml` with your desired information for your project.
-2. Change the name inside the `LICENSE` file, or replace it with a new license
-3. Update this `README.md`.
-4. Update the `CHANGELOG`.
+1. Update the `Cargo.toml` with your desired information for your project.
+2. Update the `release.yml` to change the release branch to your preferred branch and update your export/bin name.
+3. Change the name inside the `LICENSE` file, or replace it with a new license.
+4. Update this `README.md`.
+5. Update the `CHANGELOG`.
 
 ## Building
 

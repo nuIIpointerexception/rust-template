@@ -1,11 +1,9 @@
 name: release
 on:
   push:
-    # Enable when testing release infrastructure on a branch.
-    # branches:
-    # - ag/work
-    tags:
-      - "v[0-9]+.*"
+    # Replace with your own release branch. or add an entirely different condition.
+    branches:
+      - release
 jobs:
   create-release:
     name: create-release
@@ -16,7 +14,7 @@ jobs:
     outputs:
       upload_url: ${{ steps.release.outputs.upload_url }}
       release_version: ${{ env.RELEASE_VERSION }}
-      bin_name: template # CHANGE THIS!
+      bin_name: template # You might want to change it to your preferred export name.
     steps:
       - name: Get the release version from the tag
         shell: bash
