@@ -1,6 +1,7 @@
 # Rust-template
 
-![Build Status](https://github.com/bwte/template/workflows/Rust/badge.svg)
+![build](https://github.com/bwte/template/workflows/Rust/badge.svg)
+![release](https://github.com/bwte/template/actions/workflows/release.yml/badge.svg)
 
 A project template for Rust, helping to structure your projects amazingly fast.
 
