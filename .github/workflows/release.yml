@@ -18,7 +18,7 @@ jobs:
 
       - name: Export source tag environment variable
         shell: bash
-        run: echo "{SOURCE_TAG}={GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
+        run: echo "{SOURCE_TAG}={GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
 
       - name: Create release
         id: create_release
