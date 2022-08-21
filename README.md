@@ -35,6 +35,8 @@ draft: false # Set to true to create a draft release. This will keep your releas
 # END OF CONFIGURATION.
 ```
 - 🔖 Change the name inside the `LICENSE` file, or replace it with a new license.
+- 📜 Change the email inside the `CODE_OF_CONDUCT.md` file, or replace it with one fit to your likings.
+- 💰 Update the `FUNDING.yml` file with your username or just delete it.
 - 📄 Update this `README.md`.
 - 📰 Update the `CHANGELOG` and add your amazing features!
 
